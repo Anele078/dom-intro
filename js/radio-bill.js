@@ -10,3 +10,39 @@
 // * add the appropriate value to the running total
 // * add nothing for invalid values that is not 'call' or 'sms'.
 // * display the latest total on the screen
+//<input type="radio" name="billItemType" class="billItemTypeRadio" value="sms">
+
+var checkedRadioBtn = document.querySelector("input[name='billItemType']:checked");
+var radioBillAddBtn = document.querySelector(".radioBillAddBtn");
+var callTotalTwo = document.querySelector(".callTotalTwo");
+var smsTotalTwo = document.querySelector(".smsTotalTwo");
+var totalTwo = document.querySelector(".totalTwo");
+
+
+var callsTotal = 0;
+var smsTotal = 0;
+
+radioBillAddBtn.addEventListener("click", function(){
+
+    
+    if (checkedRadioBtn){
+        var billItemType = checkedRadioBtn.value
+
+
+
+        
+        // billItemType will be 'call' or 'sms'
+    }
+    
+
+    
+
+   
+    
+
+
+
+});
+
+
+

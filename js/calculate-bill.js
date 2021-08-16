@@ -14,33 +14,40 @@
 
 
 
-const billString = document.querySelector(".billString");
+  
+const  billStringElement = document.querySelector(".billString");
 const calculateBtn = document.querySelector(".calculateBtn");
-const billTotal = document.querySelector(".billTotal");
+const billTotalElement = document.querySelector(".billTotal");
 
-calculateBtn.addEventListener("click", function(){
 
-    const billTotalElement = billTotal.value;
-    const billStringElement = billString.value;
-    const billItems = billStringElement.split(",");
-    var totalCost = 0;
+  calculateBtn.addEventListener("click", function(){
+
+
+const billString = billStringElement.value;
+    var billItems = billString.split(",")
+    var  totalCost = 0;
 
     for(var i=0; i<billItems.length; i++) {
 
-        if(billItems[i].includes('call')) {
-          totalCost +=2.75 ;
-      } else if (billItems[i].includes('sms')) {
-        totalCost += 0.65;
-
+      var billItem = billItems[i].trim();
+      if(billItem.includes('call')){
+        totalCost +=2.75 ;
+    
+         }
+         else if(billItem.includes('sms')){
+          totalCost+= 0.75;
       }
 
     }
+    var roundedBillTotal =  totalCost.toFixed(2);
+    billTotalElement.innerHTML = roundedBillTotal;
 
-    var roundedBillTotal = totalCost.toFixed(2);
-    totalCost.innerHTML = roundedBillTotal;
-  
+    
 
-});
+    
+
+  });
+
 
 
 
