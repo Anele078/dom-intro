@@ -42,6 +42,14 @@ const billString = billStringElement.value;
     var roundedBillTotal =  totalCost.toFixed(2);
     billTotalElement.innerHTML = roundedBillTotal;
 
+    if (totalCost >= 20){
+    
+      billTotalElement.classList.add("danger");
+    }
+    else if (totalCost >= 30){
+      billTotalElement.classList.add("warning");
+    }
+
     
 
     

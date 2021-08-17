@@ -45,6 +45,14 @@ radioBillAddBtn.addEventListener("click", function(){
     var totalCost = callsTotal + smsTotal;
     totalTwoElem.innerHTML = totalCost.toFixed(2);
 
+    if (totalCost >= 50){
+        // adding the danger class will make the text red
+        totalTwoElem.classList.add("danger");
+    }
+    else if (totalCost >= 30){
+        totalTwoElem.classList.add("warning");
+    }
+
     
 
    
