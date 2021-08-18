@@ -12,7 +12,6 @@
 // * display the latest total on the screen
 //<input type="radio" name="billItemType" class="billItemTypeRadio" value="sms">
 
-
 var radioBillAddBtn = document.querySelector(".radioBillAddBtn");
 var callTotalTwoElem = document.querySelector(".callTotalTwo");
 var smsTotalTwoElem = document.querySelector(".smsTotalTwo");
@@ -22,6 +21,8 @@ var totalTwoElem = document.querySelector(".totalTwo");
 var callsTotal = 0;
 var smsTotal = 0;
 
+
+
 radioBillAddBtn.addEventListener("click", function(){
 
                 
@@ -29,7 +30,7 @@ radioBillAddBtn.addEventListener("click", function(){
     //var checkedRadioBtn = document.querySelector(".billItemTypeRadio");
     var checkedRadioBtn = document.querySelector("input[name='billItemType']:checked");
    
-    var checkedRadioBtnElem = checkedRadioBtn.value;
+    var checkedRadioBtnElem = checkedRadioBtn.value.trim();
 
     
 

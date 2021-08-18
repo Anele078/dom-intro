@@ -39,7 +39,7 @@ addToBillBtn.addEventListener("click", function(){
     totalOneElem.innerHTML = totalCost.toFixed(2);
 
     if (totalCost >= 50){
-        // adding the danger class will make the text red
+        
         totalOneElem.classList.add("danger");
     }
     else if (totalCost >= 30){
